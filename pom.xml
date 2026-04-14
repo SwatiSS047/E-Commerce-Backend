@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jsp</groupId>
-	<artifactId>Ecommerse-Api</artifactId>
+	<artifactId>ecommerce</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Ecommerse-Api</name>
-	<description>Ecommerse-RestApi-security git project</description>
+	<name>ecommerce</name>
+	<description>Ecommerce Rest API using Spring boot and Security</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -29,10 +29,7 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
-	
 	<dependencies>
-	
-	
 	<dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-api</artifactId>
@@ -49,6 +46,12 @@
     <artifactId>jjwt-jackson</artifactId>
     <version>0.13.0</version>
     <scope>runtime</scope>
+</dependency>
+<dependency>
+    <groupId>com.razorpay</groupId>
+    <artifactId>razorpay-java</artifactId>
+    <version>1.4.8</version>
+    <scope>compile</scope>
 </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -126,18 +129,7 @@
     <artifactId>mapstruct</artifactId>
     <version>1.5.5.Final</version>
 </dependency>
-		<dependency>
-			<groupId>com.example</groupId>
-			<artifactId>Spring-curd</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.jsp</groupId>
-			<artifactId>Employee-API</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
-
 
 	<build>
 		<plugins>
@@ -150,6 +142,11 @@
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</path>
+						<path>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct-processor</artifactId>
+        <version>1.5.5.Final</version>
+    </path>
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
